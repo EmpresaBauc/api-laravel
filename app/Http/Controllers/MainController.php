@@ -10,8 +10,8 @@ class MainController extends Controller
 {
     function login()
     {
-     echo('teste');
-     //return view('login');
+     //echo('teste');
+     return view('login');
     }
 
     function checklogin(Request $request)
