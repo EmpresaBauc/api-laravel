@@ -8,7 +8,7 @@ use App\Models\Models\Usuarios;
 
 class UsuarioController extends Controller
 {
-  
+
     public function index()
     {
         return Usuarios::all();
