@@ -11,4 +11,5 @@ class Usuarios extends Model
         'email',
         'senha',
     ];
+
 }

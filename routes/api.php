@@ -6,3 +6,4 @@ Route::apiResource('tipospiso','App\Http\Controllers\api\TiposPisoController');
 Route::apiResource('orcamentospisos','App\Http\Controllers\api\OrcamentosPisosController');
 Route::apiResource('tipospintura','App\Http\Controllers\api\TiposPinturaController');
 Route::apiResource('orcamentospintura','App\Http\Controllers\api\OrcamentosPinturasController');
+Route::post('login','App\Http\Controllers\api\LoginController@login')->name('login');
