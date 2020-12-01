@@ -15,7 +15,7 @@ class LoginController extends Controller
         $usuario = new Usuarios();
         $oUsuario = Usuarios::where('email', $email)->first();
         if($oUsuario == null){
-            return 'Email não encontrado';
+            return response(['status'=> false,'dados'=>null, 'mensagem'=> 'Email não encontrado !']);
         }else{
             if($oUsuario->senha == $senha){
                 $dados = array(
@@ -23,9 +23,9 @@ class LoginController extends Controller
                     'email' => $oUsuario->email,
                     'id' => $oUsuario->id,
                 );
-                return response($dados);
+                return response(['status'=> true,'dados'=>$dados, 'mensagem'=> 'login']);
             }else{
-                return 'Senha incorreta';
+                return response(['status'=> false,'dados'=>null, 'mensagem'=> 'Senha Incorreta !']);
             }
         }
     }
